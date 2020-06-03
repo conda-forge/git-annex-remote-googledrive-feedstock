@@ -24,6 +24,7 @@ requirements:
     - annexremote
     - drivelib ==0.1.4
     - gitpython
+    - git
     - humanfriendly
     - python >=3
     - tenacity
