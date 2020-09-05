@@ -5,7 +5,7 @@ Home: https://github.com/Lykos153/git-annex-remote-googledrive
 
 Package license: GPL-3.0-only
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: git-annex special remote for Google Drive
 
