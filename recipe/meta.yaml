@@ -1,17 +1,17 @@
 {% set name = "git-annex-remote-googledrive" %}
-{% set version = "1.1" %}
+{% set version = "1.2.1" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "db7d01be1701407e3d3e079e87a266e9e091510538e691f02fc4ab2c50f15fac"
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: ff473ab7f78331fd0bf637380df08fc3c0400c084fa40d17ab68d6161bd8afad
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
   noarch: python
   entry_points:
     - git-annex-remote-googledrive=git_annex_remote_googledrive.run:main
@@ -39,13 +39,13 @@ test:
     - pip
 
 about:
-  home: "https://github.com/Lykos153/git-annex-remote-googledrive"
-  license: "GPL-3.0-only"
-  license_family: "GPL"
+  home: https://github.com/Lykos153/git-annex-remote-googledrive
+  license: GPL-3.0-only
+  license_family: GPL
   license_file: LICENSE
-  summary: "git-annex special remote for Google Drive"
-  doc_url: "https://github.com/Lykos153/git-annex-remote-googledrive"
-  dev_url: "https://github.com/Lykos153/git-annex-remote-googledrive"
+  summary: git-annex special remote for Google Drive
+  doc_url: https://github.com/Lykos153/git-annex-remote-googledrive
+  dev_url: https://github.com/Lykos153/git-annex-remote-googledrive
 
 extra:
   recipe-maintainers:
