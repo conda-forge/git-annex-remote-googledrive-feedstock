@@ -10,7 +10,7 @@ source:
   sha256: "db7d01be1701407e3d3e079e87a266e9e091510538e691f02fc4ab2c50f15fac"
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
   noarch: python
   entry_points:
@@ -19,14 +19,14 @@ build:
 requirements:
   host:
     - pip
-    - python >=3
+    - python {{ python_min }}
   run:
     - annexremote
     - drivelib ==0.1.4
     - gitpython
     - git
     - humanfriendly
-    - python >=3
+    - python >={{ python_min }}
     - tenacity
 
 test:
@@ -37,6 +37,7 @@ test:
     - git-annex-remote-googledrive < /dev/null | grep 'VERSION 1'
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: "https://github.com/Lykos153/git-annex-remote-googledrive"
